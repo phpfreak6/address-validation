@@ -141,12 +141,20 @@ include('config.php'); // include database file.
 			e.preventDefault();
 			if($('input[name=address_1]').val() == ''){
 				$('.address_1').show();
+				$('#AddressModal').modal('hide');
+				return false;
 			}else if($('#countryId').val() == ''){
 				$('.country').show();
+				$('#AddressModal').modal('hide');
+				return false;
 			}else if($('#stateId').val() == ''){
 				$('.state').show();
+				$('#AddressModal').modal('hide');
+				return false;
 			}else if($('#cityId').val() == ''){
 				$('.city').show();
+				$('#AddressModal').modal('hide');
+				return false;
 			}
 			var address_1 = $('input[name=address_1]').val();
 			var address_2 = $('input[name=address_2]').val();
