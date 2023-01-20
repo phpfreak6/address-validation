@@ -26,7 +26,7 @@ if (empty (mysqli_fetch_array(mysqli_query($conn,"SHOW DATABASES LIKE '$dbName'"
 
 $retval = mysqli_select_db( $conn, $dbName );
 $mysqli = new mysqli($servername, $username, $password, $dbName);
-$show = $mysqli->query("SHOW TABLES from my_testDB");
+$show = $mysqli->query("SHOW TABLES from $dbName");
 $results = mysqli_fetch_row($show);
 $tbl = "CREATE TABLE tbl_addresses(
 	id int(11) NOT NULL AUTO_INCREMENT,
